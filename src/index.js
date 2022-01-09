@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { faSearch, faCaretRight, faCaretLeft, faSpinner, faStar, faBars, faTimes, faCircle } from "@fortawesome/free-solid-svg-icons"
+import { library } from '@fortawesome/fontawesome-svg-core';
+library.add( faSearch, faCaretRight, faCaretLeft, faSpinner, faStar, faBars, faTimes, faCircle )
 
 ReactDOM.render(
   <React.StrictMode>
