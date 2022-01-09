@@ -12,7 +12,7 @@ const Movieinfo = () => {
     const [ movie, setMovie ] = useState({})
 
     async function fetchMovie() {
-        const {data} = await axios.get(`http://www.omdbapi.com/?apikey=3d312dbd&i=${id}`)
+        const {data} = await axios.get(`https://www.omdbapi.com/?apikey=3d312dbd&i=${id}`)
         setMovie(data)
         setLoading(false)
         console.log(data)

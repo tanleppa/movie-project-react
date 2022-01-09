@@ -15,7 +15,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
     const [pageNum, setPageNum] = useState(1)
 
     async function fetchMovies() {
-        const { data } = await axios.get(`http://www.omdbapi.com/?apikey=3d312dbd&s=${search}&page=${pageNum}`)
+        const { data } = await axios.get(`https://www.omdbapi.com/?apikey=3d312dbd&s=${search}&page=${pageNum}`)
         setMovies(data.Search)
         setFetchData(data)
         setPageLimit(parseInt(data.totalResults) / 10)
