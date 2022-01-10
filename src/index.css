@@ -440,7 +440,7 @@ SEARCH HEADER
 .movies__header--bg {
   width: 100%;
   background-image: url("./assets/search__bg.png");
-  background-position: center -380px;
+  background-position: center -20px;
   background-size: 2020px;
   background-color: rgb(24, 24, 24);
 }
@@ -965,7 +965,7 @@ SKELETON
     min-height: calc(100vh - 318px);
   }
   .movies__header--bg {
-    background-position: center -360px;
+    background-position: center -20px;
     background-size: 1920px;
   }
 
@@ -1043,6 +1043,7 @@ SKELETON
   }
   .landing__search--container {
     flex-direction: column;
+    height: 148px;
   }
   .landing__search {
     width: 100%;
@@ -1052,7 +1053,6 @@ SKELETON
     width: 100%;
     padding: 11px 0;
     margin-top: 24px;
-    margin-bottom: 24px;
   }
   .landing__img--wrapper {
     display: none;
@@ -1097,15 +1097,16 @@ SKELETON
     height: 322px;
     min-width: 220px;
   }
-}
 
-@media (max-width: 440px) {
   .landing__title {
     font-size: 32px;
   }
   .landing__subtitle {
     font-size: 20px;
   }
+}
+
+@media (max-width: 440px) {
   .movie {
     width: 100%;
     transform: scale(1)
