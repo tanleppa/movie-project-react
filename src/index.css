@@ -7,6 +7,14 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  background-color: rgb(8, 8, 8);
+}
+
+body {
+  background-color: rgb(8, 8, 8);
+}
+
 ul {
   list-style: none;
 }
