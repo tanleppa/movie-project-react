@@ -20,7 +20,6 @@ const Movies = ({landingSearch, setLandingSearch}) => {
         setFetchData(data)
         setPageLimit(parseInt(data.totalResults) / 10)
         setLoading(false)
-        console.log(data)
     }
 
     function handleSearch() {

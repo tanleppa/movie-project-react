@@ -1030,16 +1030,21 @@ SKELETON
   .skeleton__poster {
     height: 460px;
   }
+
+  .landing__title {
+    font-size: 38px;
+  }
+  .landing__subtitle {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 586px) {
   .landing__title {
-    text-align: left;
-    font-size: 38px;
+    font-size: 34px;
   }
   .landing__subtitle {
-    text-align: left;
-    font-size: 24px;
+    font-size: 20px;
   }
   .landing__search--container {
     flex-direction: column;

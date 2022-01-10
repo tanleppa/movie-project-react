@@ -23,11 +23,9 @@ const Movieinfo = () => {
         }
         const image = new Image()
         image.src = movie.Poster
-        console.log("waiting")
         image.onload = () => {
             if (mountedRef.current) {
                setImg(image)
-               console.log("set")
             }
         }
         return () => {
