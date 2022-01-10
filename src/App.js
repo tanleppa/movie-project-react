@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Movieinfo from './components/MovieInfo';
 
 function App() {
-  const [landingSearch, setLandingSearch] = useState()
+  const [landingSearch, setLandingSearch] = useState("")
 
   return (
     <Router>
