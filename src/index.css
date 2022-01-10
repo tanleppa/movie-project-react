@@ -394,7 +394,8 @@ LANDING PAGE MAIN
 }
 
 .landing__search:focus {
-  outline: 2px solid red;
+  outline: none;
+  box-shadow: 0 0 0 2px red;
   border: 1px solid red;
 }
 
@@ -1031,6 +1032,7 @@ SKELETON
     width: 100%;
     padding: 11px 0;
     margin-top: 24px;
+    margin-bottom: 24px;
   }
   .landing__img--wrapper {
     display: none;

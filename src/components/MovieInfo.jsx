@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Nav from './Home_components/Nav';
 import axios from 'axios';
@@ -11,11 +11,35 @@ const Movieinfo = () => {
     const [ loading, setLoading ] = useState(true)
     const [ movie, setMovie ] = useState({})
 
+
+    const [img, setImg] = useState()
+
+    const mountedRef = useRef(true)
+    const initialRender = useRef(true)
+    useEffect(() => {
+        if (initialRender.current) {
+            initialRender.current = false
+            return
+        }
+        const image = new Image()
+        image.src = movie.Poster
+        console.log("waiting")
+        image.onload = () => {
+            if (mountedRef.current) {
+               setImg(image)
+               console.log("set")
+            }
+        }
+        return () => {
+            mountedRef.current = false
+        }
+    }, [movie])
+
+
     async function fetchMovie() {
         const {data} = await axios.get(`https://www.omdbapi.com/?apikey=3d312dbd&i=${id}`)
         setMovie(data)
         setLoading(false)
-        console.log(data)
     }
 
     useEffect(() => {
@@ -31,7 +55,7 @@ const Movieinfo = () => {
         </div>
         <section id="info">
             {
-                loading
+                !img
                 ?
                 (<>
                 <div className="row">
@@ -66,7 +90,7 @@ const Movieinfo = () => {
                             <img className='info__img'
                             src={
                                 movie.Poster !== "N/A"
-                                ? movie.Poster
+                                ? img.src
                                 : noPosterImg
                             } alt="" />
                         </figure>
@@ -83,7 +107,7 @@ const Movieinfo = () => {
                                 {
                                     movie.Genre
                                     .split(", ")
-                                    .map(genre => <li className='info__genre'>{genre}</li>)
+                                    .map(genre => <li key={genre} className='info__genre'>{genre}</li>)
                                 }
                             </ul><span className="bold"></span>
                             <p className='info__para info__plot'>{movie.Plot}</p>
