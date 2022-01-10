@@ -31,19 +31,21 @@ const Landing = ({setLandingSearch, landingSearch}) => {
                         <span className='gold'> 5TAR</span>
                     </h2>
                     <div className="landing__search--container">
-                        <div className="rec">
-                            <FontAwesomeIcon icon="circle" className='rec__circle'/>
-                            <h1 className='rec__text'>REC</h1>
+                        <div className="input__search--wrapper">
+                            <div className="rec">
+                                <FontAwesomeIcon icon="circle" className='rec__circle'/>
+                                <h1 className='rec__text'>REC</h1>
+                            </div>
+                            <input
+                            type="text"
+                            className="landing__search"
+                            placeholder='Etsi elokuvaa...'
+                            onFocus={startRecording}
+                            onBlur={stopRecording}
+                            value={landingSearch}
+                            onChange={(e) => setLandingSearch(e.target.value)}
+                            onKeyPress={(e) => e.key === "Enter" && navigate("/movies")}/>
                         </div>
-                        <input
-                        type="text"
-                        className="landing__search"
-                        placeholder='Etsi elokuvaa...'
-                        onFocus={startRecording}
-                        onBlur={stopRecording}
-                        value={landingSearch}
-                        onChange={(e) => setLandingSearch(e.target.value)}
-                        onKeyPress={(e) => e.key === "Enter" && navigate("/movies")}/>
                         <figure className="landing__search--btn"
                         onClick={() => navigate("/movies")}>
                             <FontAwesomeIcon icon="search" className='btn__icon'/>

@@ -301,7 +301,6 @@ LANDING PAGE MAIN
 }
 
 .landing__search--container {
-  position: relative;
   visibility: hidden;
   opacity: 0;
   width: 100%;
@@ -319,7 +318,9 @@ LANDING PAGE MAIN
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  left: 60%;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
 }
@@ -377,7 +378,7 @@ LANDING PAGE MAIN
 }
 
 .landing__search {
-  width: 76%;
+  width: 100%;
   height: 100%;
   border: 1px solid white;
   border-radius: 20px;
@@ -385,6 +386,11 @@ LANDING PAGE MAIN
   padding: 18px 24px;
   color: white;
   font-size: 24px;
+}
+
+.input__search--wrapper {
+  width: 76%;
+  position: relative;
 }
 
 .landing__search:focus {
@@ -435,6 +441,7 @@ SEARCH HEADER
   background-image: url("./assets/search__bg.png");
   background-position: center -380px;
   background-size: 2020px;
+  background-color: rgb(24, 24, 24);
 }
 
 header {
@@ -894,7 +901,7 @@ SKELETON
 @media (max-width: 1000px) {
   .movie {
     transform: scale(0.9);
-    margin: 0px 1%;
+    margin: 12px 1%;
   }
 
   .movie:hover {
@@ -958,6 +965,8 @@ SKELETON
   }
   .info__text--container {
     width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
   .info__title,
   .info__release-date,
@@ -968,6 +977,9 @@ SKELETON
   .info__genres--list {
     justify-content: center;
     align-items: center;
+  }
+  .info__back--btn {
+    margin-top: 12px;
   }
 
   .skeleton__poster {
@@ -990,9 +1002,6 @@ SKELETON
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .rec {
-    left: 58%;
   }
 }
 
@@ -1026,6 +1035,9 @@ SKELETON
   .landing__img--wrapper {
     display: none;
   }
+  .input__search--wrapper {
+    width: 100%;
+  }
 
   .search__title {
     font-size: 24px;
@@ -1049,9 +1061,8 @@ SKELETON
     min-height: calc(100vh - 251px);
   }
 
-  .rec {
-    left: 74%;
-    top: 8px;
+  .info__title {
+    font-size: 30px;
   }
 }
 
@@ -1071,8 +1082,8 @@ SKELETON
     transform: scale(1.05);
   }
 
-  .rec {
-    left: 68%;
+  .info__title {
+    font-size: 28px;
   }
 }
 
