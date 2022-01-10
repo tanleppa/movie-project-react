@@ -831,7 +831,7 @@ SKELETON
   background-color: black;
   border-radius: 12px;
   margin-top: 12px;
-  border: 1px solid rgb(24, 24, 24);
+  border: 1px solid #dbab3c;
 }
 
 .skeleton__text--container {
@@ -845,15 +845,30 @@ SKELETON
 .skeleton__genre,
 .skeleton__para,
 .skeleton__para--short {
-  background-color: black;
   border-radius: 12px;
-  border: 1px solid rgb(24, 24, 24);
+}
+
+.skeleton__para,
+.skeleton__para--short {
+  height: 16px;
+  width: 100%;
+  margin: 8px;
+  background-color: #f4f4f4;
+}
+
+.gold-bg {
+  background-color: #c58f11;
+}
+
+.pink-bg {
+  background-color: #ff6584;
 }
 
 .skeleton__title {
   width: 100%;
   height: 42px;
   margin-bottom: 24px;
+  background-color: #f4f4f4;
 }
 
 .skeleton__subtitle {
@@ -873,6 +888,7 @@ SKELETON
   height: 28px;
   width: 100%;
   margin-left: 16px;
+  background-color: white;
 }
 
 .skeleton__genre {
@@ -881,13 +897,6 @@ SKELETON
   border-radius: 50px;
   margin: 24px 0;
   background-color: #dbab3c;
-}
-
-.skeleton__para,
-.skeleton__para--short {
-  height: 16px;
-  width: 100%;
-  margin: 8px;
 }
 
 .skeleton__para--short {
@@ -1124,18 +1133,19 @@ SKELETON
   .info__title {
     font-size: 28px;
   }
+
+  .landing__title {
+    font-size: 24px;
+    margin: 12px 0;
+  }
+  .landing__subtitle {
+    font-size: 16px;
+    margin: 8px 0;
+  }
 }
 
 @media (max-width: 374px) {
   .movies__results--bg {
     min-height: calc(100vh - 284px);
-  }
-  .landing__title {
-    font-size: 28px;
-    margin: 12px 0;
-  }
-  .landing__subtitle {
-    font-size: 18px;
-    margin: 8px 0;
   }
 }

@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Movieinfo = () => {
     const navigate = useNavigate()
     const { id } = useParams()
-    const [ loading, setLoading ] = useState(true)
     const [ movie, setMovie ] = useState({})
 
 
@@ -37,12 +36,10 @@ const Movieinfo = () => {
     async function fetchMovie() {
         const {data} = await axios.get(`https://www.omdbapi.com/?apikey=3d312dbd&i=${id}`)
         setMovie(data)
-        setLoading(false)
     }
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        setLoading(true)
         fetchMovie()
     }, [])
     
@@ -62,8 +59,8 @@ const Movieinfo = () => {
                         <div className="skeleton__text--container">
                             <div className="skeleton__title"></div>
                             <div className="flex-center">
-                                <div className="skeleton__subtitle"></div>
-                                <div className="skeleton__subtitle"></div>
+                                <div className="skeleton__subtitle gold-bg"></div>
+                                <div className="skeleton__subtitle pink-bg"></div>
                                 <div className="skeleton__rating">
                                     <FontAwesomeIcon icon="star" className='star' />
                                     <div className="skeleton__rating--text"></div>
@@ -76,8 +73,8 @@ const Movieinfo = () => {
                             <div className="skeleton__para--short margin-top"></div>
                             <div className="skeleton__para--short"></div>
                             <div className="skeleton__para--short"></div>
-                            <div className="skeleton__para--short margin-top"></div>
-                            <div className="skeleton__para--short"></div>
+                            <div className="skeleton__para--short margin-top gold-bg"></div>
+                            <div className="skeleton__para--short pink-bg"></div>
                         </div>
                     </div>
                 </div></>)
