@@ -67,7 +67,7 @@ const Movieinfo = () => {
                                 <div className="skeleton__subtitle"></div>
                                 <div className="skeleton__subtitle"></div>
                                 <div className="skeleton__rating">
-                                    <FontAwesomeIcon icon="star" />
+                                    <FontAwesomeIcon icon="star" className='star' />
                                     <div className="skeleton__rating--text"></div>
                                 </div>
                                 <div className="skeleton__genre"></div>

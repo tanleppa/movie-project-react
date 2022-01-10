@@ -609,7 +609,7 @@ SEARCH RESULTS
   background-color: black;
   width: 214px;
   height: 310px;
-  border: 2px solid black;
+  border: 2px solid rgb(24, 24, 24);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -715,6 +715,7 @@ MOVIE INFO
   width: 100%;
   padding: 24px;
   display: flex;
+  align-items: center;
 }
 
 .info__img {
@@ -830,6 +831,7 @@ SKELETON
   background-color: black;
   border-radius: 12px;
   margin-top: 12px;
+  border: 1px solid rgb(24, 24, 24);
 }
 
 .skeleton__text--container {
@@ -845,6 +847,7 @@ SKELETON
 .skeleton__para--short {
   background-color: black;
   border-radius: 12px;
+  border: 1px solid rgb(24, 24, 24);
 }
 
 .skeleton__title {
@@ -863,11 +866,12 @@ SKELETON
   display: flex;
   align-items: center;
   font-size: 32px;
+  width: 50%;
 }
 
 .skeleton__rating--text {
   height: 28px;
-  width: 50%;
+  width: 100%;
   margin-left: 16px;
 }
 
@@ -876,6 +880,7 @@ SKELETON
   width: 120px;
   border-radius: 50px;
   margin: 24px 0;
+  background-color: #dbab3c;
 }
 
 .skeleton__para,
@@ -908,6 +913,10 @@ SKELETON
   .movie:hover {
     transform: scale(0.96);
   }
+
+  .skeleton__poster {
+    height: 520px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -921,6 +930,10 @@ SKELETON
   .info__runtime,
   .info__rating {
     font-size: 20px;
+  }
+
+  .skeleton__poster {
+    height: 460px;
   }
 }
 
@@ -984,8 +997,8 @@ SKELETON
   }
 
   .skeleton__poster {
-    height: 320px;
-    min-width: 220px;
+    height: 530px;
+    width: 50%;
   }
   .skeleton__text--container {
     width: 100%;
@@ -999,6 +1012,9 @@ SKELETON
     flex-direction: row;
     align-items: center;
   }
+  .skeleton__rating--text {
+    
+  }
   .flex-center {
     display: flex;
     flex-direction: column;
@@ -1009,6 +1025,10 @@ SKELETON
 @media (max-width: 680px) {
   .movie {
     width: 48%;
+  }
+
+  .skeleton__poster {
+    height: 460px;
   }
 }
 
@@ -1065,6 +1085,17 @@ SKELETON
 
   .info__title {
     font-size: 30px;
+  }
+
+  .skeleton__poster {
+    height: 390px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skeleton__poster {
+    height: 322px;
+    min-width: 220px;
   }
 }
 
