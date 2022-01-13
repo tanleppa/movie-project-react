@@ -4,7 +4,7 @@ import Movie from './Movie';
 const Searchresults = ({movies, prevSearch, setLandingSearch}) => {
     useEffect(() => {
         setLandingSearch(prevSearch)
-    }, [])
+    }, [])  // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <section id="results" className='row'>
