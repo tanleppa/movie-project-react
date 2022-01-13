@@ -36,7 +36,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
             setSearchInput(landingSearch)
             setSearch(landingSearch)
         }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const searchUseEffectInitialRender = useRef(true)
     useEffect(() => {
@@ -45,7 +45,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
             return
         }
         handleSearch()
-    }, [search]);
+    }, [search]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const pageNumUseEffectInitialRender = useRef(true)
     useEffect(() => {
@@ -56,7 +56,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
         }
         setLoading(true)
         fetchMovies()
-    }, [pageNum]);
+    }, [pageNum]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
