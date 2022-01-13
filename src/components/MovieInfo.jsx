@@ -41,7 +41,7 @@ const Movieinfo = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
         fetchMovie()
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
     
     return (
         <>

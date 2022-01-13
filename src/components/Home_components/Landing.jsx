@@ -17,7 +17,7 @@ const Landing = ({setLandingSearch, landingSearch}) => {
 
     useEffect(() => {
         setLandingSearch("")
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <main id="landing">
