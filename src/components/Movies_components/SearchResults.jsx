@@ -8,7 +8,7 @@ const Searchresults = ({movies, prevSearch, setLandingSearch}) => {
 
     return (
         <section id="results" className='row'>
-            <h2 className="results__title">{`Tulokset haulla "${prevSearch}":`}</h2>
+            <h2 className="results__title">{`Results with "${prevSearch}":`}</h2>
             <div className="results">
                 {
                     movies.map(movie => <Movie key={movie.imdbID} movie={movie}/>)

@@ -64,7 +64,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
             <div className="movies__header--container">
                 <Nav />
                 <header className='row'>
-                    <h1 className="search__title">Löydä suosikkielokuvasi</h1>
+                    <h1 className="search__title">Find your favourite movie</h1>
                     <div className="movies__search--container">
                         <input
                         type="text"
@@ -125,13 +125,13 @@ const Movies = ({landingSearch, setLandingSearch}) => {
                 &&
                 <>
                 {fetchData.Error === "Too many results."
-                && <h2 className='results__title'>Liikaa tuloksia haulla: "{search}"</h2>}
+                && <h2 className='results__title'>Too many results: "{search}"</h2>}
 
                 {(fetchData.Error === "Movie not found!" || fetchData.Error === "Incorrect IMDb ID.")
-                && <h2 className='results__title'>Ei tuloksia haulla: "{search}"</h2>}
+                && <h2 className='results__title'>No results: "{search}"</h2>}
 
                 {!fetchData.Error
-                && <h2 className='results__title'>Etsi elokuvaa</h2>}
+                && <h2 className='results__title'>Start searching</h2>}
 
                 <figure className='loading__img--wrapper'>
                     <img src={loadingImage} alt="" className='loading__img'/>

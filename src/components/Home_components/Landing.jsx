@@ -24,10 +24,10 @@ const Landing = ({setLandingSearch, landingSearch}) => {
             <div className="row landing__row">
                 <div className="container">
                     <h1 className="landing__title">
-                        Suomen suosituin ja arvovaltaisin lähde kaikelle elokuvasisällölle
+                        Finland's most popular and authoritative source for movie content
                     </h1>
                     <h2 className="landing__subtitle">
-                        LÖYDÄ SUOSIKKIELOKUVASI APUNASI
+                        FIND YOUR FAVOURITE MOVIE WITH
                         <span className='gold'> 5TAR</span>
                     </h2>
                     <div className="landing__search--container">
@@ -39,7 +39,7 @@ const Landing = ({setLandingSearch, landingSearch}) => {
                             <input
                             type="text"
                             className="landing__search"
-                            placeholder='Etsi elokuvaa...'
+                            placeholder='Search movies...'
                             onFocus={startRecording}
                             onBlur={stopRecording}
                             value={landingSearch}

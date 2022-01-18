@@ -92,8 +92,8 @@ const Movieinfo = () => {
                         <div className="info__text--container">
 
                             <h1 className='info__title'>{movie.Title}</h1>
-                            <h2 className='info__release-date'><span className='white'>Julkaistu: </span>{movie.Released}</h2>
-                            <h2 className='info__runtime'><span className='white'>Kesto: </span>{movie.Runtime}</h2>
+                            <h2 className='info__release-date'><span className='white'>Release date: </span>{movie.Released}</h2>
+                            <h2 className='info__runtime'><span className='white'>Runtime: </span>{movie.Runtime}</h2>
                             <div className="info__rating--container">
                                 <FontAwesomeIcon icon="star" className='star'/>
                                 <h2 className="info__rating">IMDb Rating: {movie.imdbRating}<span className='gray'> /10</span></h2>
@@ -106,11 +106,11 @@ const Movieinfo = () => {
                                 }
                             </ul><span className="bold"></span>
                             <p className='info__para info__plot'>{movie.Plot}</p>
-                            <p className="info__para"><span className="bold">Ohjaaja:</span> {movie.Director}</p>
-                            <p className="info__para"><span className="bold">Käsikirjoittaja:</span> {movie.Writer}</p>
-                            <p className="info__para"><span className="bold">Näyttelijät:</span> {movie.Actors}</p>
-                            <p className="info__para info__bo"><span className="bold">Tuotot:</span> <span className="white">{movie.BoxOffice}</span></p>
-                            <p className='info__para info__awards'><span className="bold">Palkinnot:</span> <span className="white">{movie.Awards}</span></p>
+                            <p className="info__para"><span className="bold">Director:</span> {movie.Director}</p>
+                            <p className="info__para"><span className="bold">Writer:</span> {movie.Writer}</p>
+                            <p className="info__para"><span className="bold">Actors:</span> {movie.Actors}</p>
+                            <p className="info__para info__bo"><span className="bold">Box Office:</span> <span className="white">{movie.BoxOffice}</span></p>
+                            <p className='info__para info__awards'><span className="bold">Awards:</span> <span className="white">{movie.Awards}</span></p>
                             
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const Movieinfo = () => {
                 <button
                 className="info__back--btn"
                 onClick={() => navigate('/movies')}>
-                    <FontAwesomeIcon icon="caret-left" /> TAKAISIN
+                    <FontAwesomeIcon icon="caret-left" /> BACK
                 </button></>)
             }
         </section>

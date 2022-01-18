@@ -16,9 +16,9 @@ const Nav = () => {
             </figure>
             </Link>
             <ul className="nav__link--list">
-                <Link to="/"><li className="nav__link nav__link--hover-effect--gold"><span className='gold'>Etusivu</span></li></Link>
-                <Link to="/movies"><li className="nav__link nav__link--hover-effect--white"><span className='white'>Elokuvat</span></li></Link>
-                <li className="nav__link"><button className='nav__link--primary'>ANNA PALAUTETTA</button></li>
+                <Link to="/"><li className="nav__link nav__link--hover-effect--gold"><span className='gold'>Home</span></li></Link>
+                <Link to="/movies"><li className="nav__link nav__link--hover-effect--white"><span className='white'>Movies</span></li></Link>
+                <li className="nav__link"><button className='nav__link--primary'>CONTACT</button></li>
             </ul>
             <button className="menu__btn"
             onClick={toggleMenu}>
@@ -31,9 +31,9 @@ const Nav = () => {
                     <FontAwesomeIcon icon="times" />
                 </figure>
                 <ul className="nav__link--list--menu">
-                    <Link to="/"><li className="nav__link--menu" onClick={toggleMenu}><span className='black'>Etusivu</span></li></Link>
-                    <Link to="/movies"><li className="nav__link--menu" onClick={toggleMenu}><span className='black'>Elokuvat</span></li></Link>
-                    <li className="nav__link--menu no-underline"><button className='nav__link--primary--menu'>ANNA PALAUTETTA</button></li>
+                    <Link to="/"><li className="nav__link--menu" onClick={toggleMenu}><span className='black'>Home</span></li></Link>
+                    <Link to="/movies"><li className="nav__link--menu" onClick={toggleMenu}><span className='black'>Movies</span></li></Link>
+                    <li className="nav__link--menu no-underline"><button className='nav__link--primary--menu'>CONTACT</button></li>
                 </ul>
             </div>
         </nav>
