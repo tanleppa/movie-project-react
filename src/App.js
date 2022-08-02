@@ -3,6 +3,7 @@ import Movies from './components/Movies';
 import Home from './components/Home';
 import { useState } from 'react';
 import Movieinfo from './components/MovieInfo';
+import resultsHeaderBg from './assets/search__bg.png'
 
 function App() {
   const [landingSearch, setLandingSearch] = useState("")
@@ -12,7 +13,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home landingSearch={landingSearch} setLandingSearch={setLandingSearch}/>}></Route>
-          <Route path="/movies" element={<Movies landingSearch={landingSearch} setLandingSearch={setLandingSearch}/>}></Route>
+          <Route path="/movies" element={<Movies landingSearch={landingSearch} setLandingSearch={setLandingSearch} headerBg={resultsHeaderBg}/>}></Route>
           <Route path="/movie/:id" element={<Movieinfo />}></Route>
         </Routes>
       </div>

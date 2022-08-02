@@ -5,7 +5,7 @@ import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import loadingImage from '../assets/undraw_videographer_nnc7.svg'
 
-const Movies = ({landingSearch, setLandingSearch}) => {
+const Movies = ({landingSearch, setLandingSearch, headerBg}) => {
     const [movies, setMovies] = useState([])
     const [fetchData, setFetchData] = useState({})
     const [pageLimit, setPageLimit] = useState(2)
@@ -60,7 +60,7 @@ const Movies = ({landingSearch, setLandingSearch}) => {
 
     return (
         <>
-        <div className="movies__header--bg">
+        <div className="movies__header--bg" style={{ backgroundImage: `url(${headerBg})`}}>
             <div className="movies__header--container">
                 <Nav />
                 <header className='row'>

@@ -452,7 +452,6 @@ SEARCH HEADER
 
 .movies__header--bg {
   width: 100%;
-  background-image: url("./assets/search__bg.png");
   background-position: center -20px;
   background-size: 2020px;
   background-color: rgb(24, 24, 24);
